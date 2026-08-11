@@ -12,29 +12,29 @@ public class exercicioRevisao3 {
         double altura = input.nextDouble();
 
         double imc;
-        imc = peso/(altura*altura);
+        imc = peso/(altura*altura); //double imc = massa / Math.pow(altura,2);
 
         if (imc < 18.5)
         {
             System.out.println("Magreza " + df.format(imc));
         }
-        if (imc >= 18.5 && imc <= 24.9)
+        else if (imc >= 18.5 && imc <= 24.9)
         {
             System.out.println("Saudável " + df.format(imc));
         }
-        if (imc == 25 && imc <= 29.9)
+        else if (imc == 25 && imc <= 29.9)
         {
             System.out.println("Sobrepeso " + df.format(imc));
         }
-        if (imc == 30 && imc <= 34.9)
+        else if (imc == 30 && imc <= 34.9)
         {
             System.out.println("Obesidade grau I " + df.format(imc));
         }
-        if (imc == 35 && imc <= 39.9)
+        else if (imc == 35 && imc <= 39.9)
         {
             System.out.println("Obesidade grau II (SEVERA) " + df.format(imc));
         }
-        if (imc >= 40.0)
+        else
         {
             System.out.println("Obesidade grau III (MORBIDA) " + df.format(imc));
         }
