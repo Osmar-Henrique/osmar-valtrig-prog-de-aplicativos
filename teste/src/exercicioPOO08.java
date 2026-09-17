@@ -20,10 +20,10 @@ public class exercicioPOO08 {
         }
         System.out.println(maiorContribuinte);
 
-        double somaImpostos = 0;
+        double somaImpostos =0;
 
         for (int i = 0; i < rendas.length; i++){
-            
+            somaImpostos += rendas[i].calcularImposto();
         }
         System.out.println(somaImpostos);
 
