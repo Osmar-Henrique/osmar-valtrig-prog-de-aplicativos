@@ -33,7 +33,7 @@ public class Contribuinte {
     }
 
     public void setCpf(String cpf) {
-        if (cpf == null || cpf.isBlank()){
+        if (cpf == null || cpf.isBlank() || cpf.length() != 11){
             System.out.println("CPF Inválido.");
         }
         else {
@@ -46,7 +46,7 @@ public class Contribuinte {
     }
 
     public void setUf(String uf) {
-        if (uf == null || uf.isBlank()){
+        if (uf == null || uf.isBlank() || uf.length() != 2){
             System.out.println("UF Inválido.");
         }
         else {
@@ -70,7 +70,7 @@ public class Contribuinte {
 
     public double calcularImposto() {
         if (rendaAnual <= 4000.00) {
-            return rendaAnual * 0;
+            return 0;
         }
         else if (rendaAnual > 4000.00 && rendaAnual <= 9000.00) {
             return rendaAnual * 0.058;
@@ -81,9 +81,8 @@ public class Contribuinte {
         else if (rendaAnual >25000.00 && rendaAnual <= 35000.00) {
             return rendaAnual * 0.275;
         }
-        else {
             return rendaAnual * 0.30;
-        }
+
     }
     @Override
     public String toString() {
