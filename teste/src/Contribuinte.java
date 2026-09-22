@@ -67,21 +67,24 @@ public class Contribuinte {
             this.rendaAnual = rendaAnual;
         }
     }
-
     public double calcularImposto() {
+        return rendaAnual * calcularAliquota();
+    }
+
+    private double calcularAliquota() { //aqui foi colocado private para ser usado apenas na classe CONTRIBUINTE
         if (rendaAnual <= 4000.00) {
             return 0;
         }
-        else if (rendaAnual > 4000.00 && rendaAnual <= 9000.00) {
-            return rendaAnual * 0.058;
+        else if (rendaAnual <= 9000.00) {
+            return 0.058;
         }
-        else if (rendaAnual >9000.00 && rendaAnual <= 25000.00) {
-            return rendaAnual * 0.15;
+        else if (rendaAnual <= 25000.00) {
+            return 0.15;
         }
-        else if (rendaAnual >25000.00 && rendaAnual <= 35000.00) {
-            return rendaAnual * 0.275;
+        else if (rendaAnual <= 35000.00) {
+            return 0.275;
         }
-            return rendaAnual * 0.30;
+            return 0.30;
 
     }
     @Override
