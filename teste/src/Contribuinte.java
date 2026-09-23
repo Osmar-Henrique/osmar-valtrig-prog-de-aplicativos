@@ -21,11 +21,10 @@ public class Contribuinte {
 
     public void setNome(String nome) {
         if (nome == null || nome.isBlank()){
-            System.out.println("Nome inválido.");
+            throw new IllegalArgumentException("Nome inválido.");
         }
-        else {
-            this.nome = nome;
-        }
+        this.nome = nome;
+
     }
 
     public String getCpf() {
@@ -34,11 +33,9 @@ public class Contribuinte {
 
     public void setCpf(String cpf) {
         if (cpf == null || cpf.isBlank() || cpf.length() != 11){
-            System.out.println("CPF Inválido.");
+            throw new IllegalArgumentException("CPF inválido.");
         }
-        else {
         this.cpf = cpf;
-        }
     }
 
     public String getUf() {
@@ -47,11 +44,9 @@ public class Contribuinte {
 
     public void setUf(String uf) {
         if (uf == null || uf.isBlank() || uf.length() != 2){
-            System.out.println("UF Inválido.");
+            throw new IllegalArgumentException("UF inválida.");
         }
-        else {
-            this.uf = uf;
-        }
+        this.uf = uf;
     }
 
     public double getRendaAnual() {
@@ -59,13 +54,11 @@ public class Contribuinte {
     }
 
     public void setRendaAnual(double rendaAnual) {
-        if (rendaAnual < 0)
-        {
-            System.out.println("Renda anual inválida!");
+        if (rendaAnual < 0) {
+            throw new IllegalArgumentException("Renda inválida.");
         }
-        else {
-            this.rendaAnual = rendaAnual;
-        }
+        this.rendaAnual = rendaAnual;
+
     }
     public double calcularImposto() {
         return rendaAnual * calcularAliquota();
