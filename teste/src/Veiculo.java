@@ -6,11 +6,11 @@ public class Veiculo {
 
     private String placa;
 
-    private String ano;
+    private int ano;
 
     private double preco;
 
-    public Veiculo(String marca, String modelo, String placa, String ano, double preco) {
+    public Veiculo(String marca, String modelo, String placa, int ano, double preco) {
         setMarca(marca);
         setModelo(modelo);
         setPlaca(placa);
@@ -24,7 +24,7 @@ public class Veiculo {
 
     public void setMarca(String marca) {
         if (marca == null || marca.isBlank()) {
-            throw new IllegalArgumentException("Marca não encontrada");
+            throw new IllegalArgumentException("Marca inexistente.");
         }
         this.marca = marca;
     }
@@ -34,9 +34,6 @@ public class Veiculo {
     }
 
     public void setModelo(String modelo) {
-        if (modelo == null || modelo.isBlank()) {
-            throw new IllegalArgumentException("Modelo não encontrada");
-        }
         this.modelo = modelo;
     }
 
@@ -45,20 +42,14 @@ public class Veiculo {
     }
 
     public void setPlaca(String placa) {
-            if (placa == null || placa.isBlank()) {
-                throw new IllegalArgumentException("Placa não encontrada");
-        }
         this.placa = placa;
     }
 
-    public String getAno() {
+    public int getAno() {
         return ano;
     }
 
-    public void setAno(String ano) {
-            if (ano == null || ano.isBlank()) {
-                throw new IllegalArgumentException("Marca não encontrada");
-        }
+    public void setAno(int ano) {
         this.ano = ano;
     }
 
@@ -67,9 +58,15 @@ public class Veiculo {
     }
 
     public void setPreco(double preco) {
-        if (preco <= 0) {
-            throw new IllegalArgumentException("Preço inválido.");
-        }
         this.preco = preco;
     }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" + "marca='" + marca + '\'' + ", modelo='" + modelo + '\'' +
+                ", placa='" + placa + '\'' +
+                ", ano=" + ano +
+                ", preco=" + preco +
+                '}';
     }
+}
