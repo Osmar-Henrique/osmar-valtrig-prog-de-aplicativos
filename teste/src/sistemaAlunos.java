@@ -15,6 +15,16 @@ public class sistemaAlunos {
 
     public List<Alunos> obterCursoIdadeMaiorMediaMaior(String curso, int idade, int media){
 
+        List<Alunos> resultado = new ArrayList<>();
+
+        for (Alunos a : listaAlunos) {
+            if (a.getCurso().equalsIgnoreCase(curso) && a.getIdade() >= idade && a.getMediaFinal() >= media){
+                resultado.add(a);
+            }
+        }
+
+        return resultado;
+
 
     }
 }
