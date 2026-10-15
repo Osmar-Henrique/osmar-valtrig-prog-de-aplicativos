@@ -15,6 +15,9 @@ public class Floricultura {
     }
 
     public void setFlor(String flor) {
+        if (flor == null || flor.isBlank()) {
+            throw new IllegalArgumentException("Flor inexistente.");
+        }
         this.flor = flor;
     }
 
@@ -31,6 +34,9 @@ public class Floricultura {
     }
 
     public void setNome(String nome) {
+        if (nome == null || nome.isBlank()) {
+            throw new IllegalArgumentException("Nome inexistente.");
+        }
         this.nome = nome;
     }
 

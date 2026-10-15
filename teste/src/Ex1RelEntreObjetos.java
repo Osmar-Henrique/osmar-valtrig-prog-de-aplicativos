@@ -6,7 +6,7 @@ public class Ex1RelEntreObjetos {
         Retangulo r3 = new Retangulo(50,45);
         Retangulo r4 = new Retangulo(60,55);
 
-        ListaRetangulos l1 = new ListaRetangulos();
+        formasGeometricas l1 = new formasGeometricas();
 
         l1.adicionarRetangulo(r1);
         l1.adicionarRetangulo(r2);

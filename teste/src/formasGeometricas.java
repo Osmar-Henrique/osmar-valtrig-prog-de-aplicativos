@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListaRetangulos {
+public class formasGeometricas {
     private List<Retangulo> retangulos;
 
-    public ListaRetangulos() {
+    public formasGeometricas() {
         retangulos = new ArrayList<Retangulo>();
     }
 
