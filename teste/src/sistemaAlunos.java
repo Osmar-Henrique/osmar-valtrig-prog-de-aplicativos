@@ -13,7 +13,7 @@ public class sistemaAlunos {
         listaAlunos.add(a);
     }
 
-    public List<Alunos> obterCursoIdadeMaiorMediaMaior(String curso, int idade, int media){
+    public List<Alunos> obterCursoIdadeMaiorMediaMaior(String curso, int idade, double media){
 
         List<Alunos> resultado = new ArrayList<>();
 
@@ -26,5 +26,16 @@ public class sistemaAlunos {
         return resultado;
 
 
+    }
+
+    public List<Alunos> buscarMatricula (String matriculadoAluno) {
+        List<Alunos> busca = new ArrayList<>();
+
+        for (Alunos a : listaAlunos) {
+            if (a.getMatricula().equalsIgnoreCase(matriculadoAluno)) {
+                busca.add(a);
+            }
+        }
+        return busca;
     }
 }

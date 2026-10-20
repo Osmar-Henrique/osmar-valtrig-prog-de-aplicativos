@@ -1,5 +1,6 @@
 public class Floricultura {
 
+    //os atributos do objeto é o que ele é.
     private String flor;
     private double preco;
     private String nome;
