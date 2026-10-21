@@ -18,6 +18,6 @@ public class ex3RelObj {
 
         System.out.println(S1.obterCursoIdadeMaiorMediaMaior("Matematica",16,6.2));
 
-        System.out.println(S1.buscarMatricula("1903"));
+        System.out.println(S1.buscarMatricula("2000"));
     }
 }

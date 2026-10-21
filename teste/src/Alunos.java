@@ -6,6 +6,8 @@ public class Alunos {
     private String curso;
     private double mediaFinal;
 
+    //atributos /\
+
     public Alunos(String nome, int idade, String matricula, String curso, double mediaFinal) {
         setNome(nome);
         setIdade(idade);

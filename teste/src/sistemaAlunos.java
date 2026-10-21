@@ -21,7 +21,7 @@ public class sistemaAlunos {
 
         List<Alunos> resultado = new ArrayList<>();
 
-        for (Alunos a : listaAlunos) {
+        for (Alunos a : listaAlunos) { //se eu colocar um sout(a) ali dentro do for, ele irá mostrar a lista sendo percorrida
             if (a.getCurso().equalsIgnoreCase(curso) && a.getIdade() >= idade && a.getMediaFinal() >= media){
                 resultado.add(a);
             }
@@ -38,6 +38,6 @@ public class sistemaAlunos {
                 return a;                                              //ele encaixa no return
             }
         }
-        return null; //se ele nunca encontrar ninguém que encaixa no if, ou não houver nenhum aluno para ser procurado, precisa ter um retorno
-    }                //que no caso seria NULL.
+        throw new IllegalArgumentException("Matricula não encontrada!"); //se ele nunca encontrar ninguém
+    }                 // que encaixa no if, ou não houver nenhum aluno para ser procurado, precisa ter um retorno que no caso seria NULL.
 }

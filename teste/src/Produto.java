@@ -13,7 +13,25 @@ public class Produto {
     }
 
     public void adicionarEstoque (int quantidade) {
-        if ()
+        if (quantidade > 0){
+            estoque += quantidade;
+            System.out.println("Valor adicionado ao estoque.");
+        }
+        else {
+            System.out.println("Quantidade inválida.");
+        }
+    }
+
+    public boolean vender (int quantidade) {
+        if (quantidade > 0 && quantidade <= estoque ){
+            estoque -= quantidade;
+            System.out.println("Venda realizada com sucesso.");
+            return true;
+        }
+        else {
+            System.out.println("Estoque insuficiente, venda não realizada.");
+            return false;
+        }
     }
 
     public String getMarca() {
