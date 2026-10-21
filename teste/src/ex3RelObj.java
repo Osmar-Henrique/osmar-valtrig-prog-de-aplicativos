@@ -14,8 +14,9 @@ public class ex3RelObj {
         S1.adicionarAluno(A2);
         S1.adicionarAluno(A3);
         S1.adicionarAluno(A4);
+        S1.adicionarAluno(A5);
 
-        System.out.println(S1.obterCursoIdadeMaiorMediaMaior("Economia",16,6.2));
+        System.out.println(S1.obterCursoIdadeMaiorMediaMaior("Matematica",16,6.2));
 
         System.out.println(S1.buscarMatricula("1903"));
     }

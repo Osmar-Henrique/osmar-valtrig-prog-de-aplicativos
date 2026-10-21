@@ -12,6 +12,8 @@ public class Alunos {
         setMatricula(matricula);
         setCurso(curso);
         setMediaFinal(mediaFinal);
+
+        //quais informações o aluno precisa para ser instanciado
     }
 
     public String getNome() {
@@ -19,6 +21,9 @@ public class Alunos {
     }
 
     public void setNome(String nome) {
+        if (nome == null || nome.isBlank()){
+            throw new IllegalArgumentException("Nome inválido.");
+        }
         this.nome = nome;
     }
 

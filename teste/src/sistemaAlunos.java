@@ -10,6 +10,10 @@ public class sistemaAlunos {
     }
 
     public void adicionarAluno(Alunos a) {
+        for (Alunos aluno : listaAlunos)
+            if (aluno.getMatricula().equalsIgnoreCase(a.getMatricula())){
+                throw new IllegalArgumentException("Matrícula repetida!");
+            }
         listaAlunos.add(a);
     }
 
@@ -24,18 +28,16 @@ public class sistemaAlunos {
         }
 
         return resultado;
-
-
     }
 
-    public List<Alunos> buscarMatricula (String matriculadoAluno) {
-        List<Alunos> busca = new ArrayList<>();
+    public Alunos buscarMatricula (String matriculadoAluno) {
+        Alunos busca = null;
 
         for (Alunos a : listaAlunos) {
-            if (a.getMatricula().equalsIgnoreCase(matriculadoAluno)) {
-                busca.add(a);
+            if (a.getMatricula().equalsIgnoreCase(matriculadoAluno)) { //cada aluno dessa lista é A, quando um deles encaixar no if
+                return a;                                              //ele encaixa no return
             }
         }
-        return busca;
-    }
+        return null; //se ele nunca encontrar ninguém que encaixa no if, ou não houver nenhum aluno para ser procurado, precisa ter um retorno
+    }                //que no caso seria NULL.
 }
