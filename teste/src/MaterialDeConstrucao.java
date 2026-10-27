@@ -30,9 +30,6 @@ public class MaterialDeConstrucao {
     public List<Produto> produtoPorMarcaEpreco(String marca, double precoX, double precoY) { //o retorno é sempre aquilo que aparece no inicio, no caso,
         List<Produto> resultado = new ArrayList<>();                                         //no caso, uma lista List, entre parenteses são só os parametros
 
-        if (precoX > precoY) {
-            return resultado;
-        }
 
         for (Produto p : lojaMaterial) {
             if (p.getMarca().equalsIgnoreCase(marca) && p.getPreco() >= precoX && p.getPreco()<= precoY){

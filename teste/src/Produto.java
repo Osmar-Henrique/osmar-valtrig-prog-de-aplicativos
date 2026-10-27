@@ -18,20 +18,16 @@ public class Produto {
             System.out.println("Valor adicionado ao estoque.");
         }
         else {
-            System.out.println("Quantidade inválida.");
+            throw new IllegalArgumentException("Impossível aumentar a quantidade.");
         }
     }
 
-    public boolean vender (int quantidade) {
-        if (quantidade > 0 && quantidade <= estoque ){
-            estoque -= quantidade;
-            System.out.println("Venda realizada com sucesso.");
-            return true;
+
+    public void venderQuantidadeDoEstoque (double venda){
+        if (venda > estoque || venda <= 0){
+            throw new IllegalArgumentException("Erro na quantidade.");
         }
-        else {
-            System.out.println("Estoque insuficiente, venda não realizada.");
-            return false;
-        }
+        estoque += venda;
     }
 
     public String getMarca() {
