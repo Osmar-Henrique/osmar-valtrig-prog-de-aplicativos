@@ -26,13 +26,13 @@ public class Conta {
         }
     }
 
-    public void transferir (double valor, Conta contadestino){
-        if (valor <= 0 || contadestino == null || valor > saldo){
+    public void transferir (double valor, Conta contaDestino){
+        if (valor <= 0 || contaDestino == null || valor > saldo){
             throw new IllegalArgumentException("Transferência inválida.");
         }
         else {
             saldo -= valor;
-            contadestino.saldo += valor;
+            contaDestino.saldo += valor; //conta destino terá seu saldo adicionado ao valor da transferência
         }
     }
 
