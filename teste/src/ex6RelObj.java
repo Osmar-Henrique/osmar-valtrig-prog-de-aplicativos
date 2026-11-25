@@ -6,7 +6,9 @@ public class ex6RelObj {
 
 
         Pessoa p1 = new Pessoa("Simao",e1);
+        Pessoa p2 = new Pessoa("Jorge", new Endereco("SC", "Blumenau", "89055-001", "Rua exemplo 3", "03"));
 
         System.out.println(p1);
+        System.out.println(p2);
     }
 }
